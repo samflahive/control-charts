@@ -21,12 +21,12 @@ def create_common_control_chart(
         return create_shewart_deviation_control_chart(target_value, upper_limit, lower_limit, drift_config)
     elif chart_type == "SV":
         return create_shewart_variance_control_chart(target_value, upper_limit, lower_limit, drift_config)
-    elif chart_type == "CM":
-        return create_cusum_mean_control_chart(target_value, previous_value, special_param, upper_limit, lower_limit)
     elif chart_type == "UC":
         return create_upper_cusum_mean_control_chart(target_value, previous_value, special_param, upper_limit, lower_limit)
     elif chart_type == "LC":
         return create_lower_cusum_mean_control_chart(target_value, previous_value, special_param, upper_limit, lower_limit)
     elif chart_type == "EW":
         return create_ewma_mean_control_chart(target_value, previous_value, special_param, upper_limit, lower_limit)
+    else:
+        raise ValueError("{} is not a known chart type identifier".format(chart_type))
 

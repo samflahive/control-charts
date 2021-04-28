@@ -1,5 +1,4 @@
 
-from .CusumMeanCharacteristic import CusumMeanCharacteristic
 from .EWMAMeanCharacteristic import EWMAMeanCharacteristic
 from .LowerCusumMeanCharacteristic import LowerCusumMeanCharacteristic
 from .UpperCusumMeanCharacteristic import UpperCusumMeanCharacteristic

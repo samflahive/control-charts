@@ -56,14 +56,6 @@ def create_shewart_variance_control_chart(target_value, upper_limit, lower_limit
         )
     return ControlChart(target_value, control_characteristic=control_characteristic, control_limits=control_limits)
 
-def create_cusum_mean_control_chart(target_value, initial_value, weight_offset, upper_limit, lower_limit):
-    control_characteristic = ControlCharacteristic.CusumMeanCharacteristic(target_value=target_value, initial_value=initial_value, slack=slack)
-    control_limits = create_ULD_limits(
-        upper_limit,
-        lower_limit
-        )
-    return ControlChart(target_value, control_characteristic=control_characteristic, control_limits=control_limits)
-
 def create_upper_cusum_mean_control_chart(target_value, initial_value, slack, upper_limit, lower_limit):
     control_characteristic = ControlCharacteristic.UpperCusumMeanCharacteristic(target_value=target_value, initial_value=initial_value, slack=slack)
     control_limits = create_ULD_limits(
