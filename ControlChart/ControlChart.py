@@ -1,9 +1,10 @@
 class ControlChart:
-    def __init__(self, control_characteristic, control_limits):
+    def __init__(self, target_value, control_characteristic, control_limits):
         self.control_characteristic = control_characteristic
         self.control_limits = control_limits
         self.control_characteristic_state = None
         self.control_limit_state = True
+        self.target_value = target_value
 
     def accept_sample(self, sample):
         self.control_characteristic.accept_sample(sample)

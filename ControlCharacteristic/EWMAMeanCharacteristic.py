@@ -1,7 +1,7 @@
 from .ControlCharacteristic import ControlCharacteristic
 
 class EWMAMeanCharacteristic(ControlCharacteristic):
-    def __init__(self, initial_mean, weigth):
+    def __init__(self, initial_mean, weight):
         self.ewma_mean = initial_mean
         self.weight = weight
         super().__init__()

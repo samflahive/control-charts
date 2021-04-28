@@ -2,7 +2,7 @@ from .ControlCharacteristic import ControlCharacteristic
 
 class LowerCusumMeanCharacteristic(ControlCharacteristic):
     def __init__(self, target_value, slack, initial_value):
-        self.cusum_mean = initial_mean
+        self.cusum_mean = initial_value
         self.target = target_value - slack
         super().__init__()
 
